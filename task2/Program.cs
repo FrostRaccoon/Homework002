@@ -3,13 +3,13 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-using static System.Console;
-
-Console.Write("Введите любое число: ");
+Console.WriteLine("Введите число: ");
 
 int num = Convert.ToInt32(Console.ReadLine());
-string numStr = Convert.ToString(num);
-int numDigit = numStr.Length;
 
-if (numDigit > 2) WriteLine($"Третья цифра введённого числа: {numStr[2]}");
-else WriteLine("третьей цифры нет");
+while (num >= 1000)
+{
+    num /= 10;
+}
+
+Console.WriteLine(num % 10);
